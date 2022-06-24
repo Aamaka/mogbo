@@ -1,2 +1,12 @@
-package africa.semicolon.mogbo.dto.requests;public class RegisterUserRequest {
+package africa.semicolon.mogbo.dto.requests;
+
+import lombok.Data;
+
+@Data
+public class RegisterUserRequest {
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String password;
+
 }
