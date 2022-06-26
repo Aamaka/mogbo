@@ -1,6 +1,5 @@
 package africa.semicolon.mogbo.dto.responses;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,9 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class RegisterUserResponse {
-
-    private String email;
-    private String dateCreated;
-
+public class LoginUserResponse {
+    private String message;
+    private String lastSeen;
 }
