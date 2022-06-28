@@ -9,5 +9,4 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class LoginUserResponse {
     private String message;
-    private String lastSeen;
 }

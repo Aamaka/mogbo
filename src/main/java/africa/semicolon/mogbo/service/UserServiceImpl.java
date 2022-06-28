@@ -7,7 +7,6 @@ import africa.semicolon.mogbo.dto.requests.RegisterUserRequest;
 import africa.semicolon.mogbo.dto.responses.LoginUserResponse;
 import africa.semicolon.mogbo.dto.responses.RegisterUserResponse;
 import africa.semicolon.mogbo.exceptions.EmailNotFoundException;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +15,6 @@ import java.util.Optional;
 
 
 @Service
-@Slf4j
 public class UserServiceImpl implements UserService{
 
     @Autowired
@@ -40,20 +38,15 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public LoginUserResponse login(LoginUserRequest request) {
-      Optional<User> user= userRepository.findUserByEmail(request.getEmail());
-            if(user.isPresent()) {
-                if (user.get().getPassword().equals(request.getPassword())) {
-                    LoginUserResponse response = new LoginUserResponse();
-                    response.setMessage("Welcome back " + user.get().getFirstName());
-                    response.setLastSeen(DateTimeFormatter.ofPattern("EEEE, dd/MM/ yyyy,  hh:mm, a").
-                            format(user.get().getDateTime()));
+        User user = userRepository.findByEmail(request.getEmail());
+        if(user.getEmail().equals(request.getEmail())){
+            if(user.getPassword().equals(request.getPassword())){
+                LoginUserResponse response = new LoginUserResponse();
+                    response.setMessage("Welcome back " + user.getFirstName());
                     return response;
-                }
-                else throw new EmailNotFoundException("not found");
             }
-         throw new EmailNotFoundException("not found");
+        }
+        throw new EmailNotFoundException("Email not found");
     }
-
-
 
 }
