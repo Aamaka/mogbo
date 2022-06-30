@@ -5,7 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="530bd0c9-b2f9-434b-8104-7d0050ef768c" name="Changes" comment="motigbo">
+      <change afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/mogbo/data/model/Party.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/mogbo/data/repository/PartyRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/mogbo/dto/requests/CreatedPartyRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/mogbo/dto/responses/ApiResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/mogbo/dto/responses/CreatedPartyResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/mogbo/exceptions/DuplicateException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/mogbo/exceptions/UserDoesNotExistException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/mogbo/service/PartyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/mogbo/service/PartyServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/africa/semicolon/mogbo/service/PartyServiceImplTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/africa/semicolon/mogbo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/mogbo/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/africa/semicolon/mogbo/data/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/mogbo/data/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/africa/semicolon/mogbo/data/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/mogbo/data/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/africa/semicolon/mogbo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/mogbo/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/africa/semicolon/mogbo/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/mogbo/service/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/africa/semicolon/mogbo/service/UserServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/africa/semicolon/mogbo/service/UserServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +32,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -53,6 +68,9 @@
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="africa.semicolon.mogbo.exceptions" />
+      <recent name="africa.semicolon.mogbo.dto.responses" />
+      <recent name="africa.semicolon.mogbo.dto.requests" />
+      <recent name="africa.semicolon.mogbo.data.model" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -62,18 +80,65 @@
       <recent name="africa.semicolon.mogbo.data.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserRepositoryTest">
-    <configuration name="UserRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.PartyServiceImplTest">
+    <configuration name="PartyServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mogbo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="africa.semicolon.mogbo.data.repository.*" />
+          <option name="PATTERN" value="africa.semicolon.mogbo.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="africa.semicolon.mogbo.data.repository" />
-      <option name="MAIN_CLASS_NAME" value="africa.semicolon.mogbo.data.repository.UserRepositoryTest" />
+      <option name="PACKAGE_NAME" value="africa.semicolon.mogbo.service" />
+      <option name="MAIN_CLASS_NAME" value="africa.semicolon.mogbo.service.PartyServiceImplTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PartyServiceImplTest.addNewPartyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mogbo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="africa.semicolon.mogbo.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="africa.semicolon.mogbo.service" />
+      <option name="MAIN_CLASS_NAME" value="africa.semicolon.mogbo.service.PartyServiceImplTest" />
+      <option name="METHOD_NAME" value="addNewPartyTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mogbo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="africa.semicolon.mogbo.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="africa.semicolon.mogbo.service" />
+      <option name="MAIN_CLASS_NAME" value="africa.semicolon.mogbo.service.UserServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceImplTest.registerUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mogbo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="africa.semicolon.mogbo.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="africa.semicolon.mogbo.service" />
+      <option name="MAIN_CLASS_NAME" value="africa.semicolon.mogbo.service.UserServiceImplTest" />
+      <option name="METHOD_NAME" value="registerUserTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -93,8 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserRepositoryTest" />
+        <item itemvalue="JUnit.PartyServiceImplTest" />
+        <item itemvalue="JUnit.UserServiceImplTest" />
+        <item itemvalue="JUnit.UserServiceImplTest.registerUserTest" />
         <item itemvalue="Spring Boot.Main" />
+        <item itemvalue="JUnit.PartyServiceImplTest.addNewPartyTest" />
       </list>
     </recent_temporary>
   </component>
@@ -110,7 +178,7 @@
       <workItem from="1656318531998" duration="1084000" />
       <workItem from="1656341608318" duration="6368000" />
       <workItem from="1656366700251" duration="9041000" />
-      <workItem from="1656490478988" duration="13450000" />
+      <workItem from="1656490478988" duration="34931000" />
     </task>
     <task id="LOCAL-00001" summary="springboot">
       <created>1656107188059</created>
@@ -140,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656540550233</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="motigbo">
+      <created>1656578373637</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1656578373637</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
