@@ -21,7 +21,6 @@ public class User {
     private String lastName;
     private String password;
     private LocalDateTime dateTime = LocalDateTime.now();
-
     @DBRef
     private List<Party> parties = new ArrayList<>();
 

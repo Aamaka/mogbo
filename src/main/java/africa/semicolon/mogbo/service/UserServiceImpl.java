@@ -21,7 +21,6 @@ import java.util.Optional;
 @Service
 public class UserServiceImpl implements UserService{
 
-
     private UserRepository userRepository;
 
     private  PartyService partyService;
@@ -61,7 +60,7 @@ public class UserServiceImpl implements UserService{
     @Override
     public CreatedPartyResponse addParty(CreatedPartyRequest request) {
         Optional<User> user = userRepository.findUserByEmail(request.getEmail());
-        if(user.isEmpty()) throw  new UserDoesNotExistException(request.getEmail()+" does not exist");
+        if(user.isEmpty()) throw new UserDoesNotExistException(request.getEmail()+" does not exist");
         User foundUser = user.get();
         Party party = new Party();
         party.setLocation(request.getPartyLocation());
