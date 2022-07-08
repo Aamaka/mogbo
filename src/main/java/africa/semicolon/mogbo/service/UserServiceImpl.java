@@ -21,9 +21,9 @@ import java.util.Optional;
 @Service
 public class UserServiceImpl implements UserService{
 
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
-    private  PartyService partyService;
+    private final PartyService partyService;
 
     @Autowired
     public UserServiceImpl(UserRepository userRepository, PartyService partyService) {
