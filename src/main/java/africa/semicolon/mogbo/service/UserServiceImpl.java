@@ -31,6 +31,7 @@ public class UserServiceImpl implements UserService{
         this.partyService = partyService;
     }
 
+
     @Override
     public RegisterUserResponse registerUser(RegisterUserRequest request) {
         if(userRepository.existsByEmail(request.getEmail()))throw new DuplicateException("email exist");
