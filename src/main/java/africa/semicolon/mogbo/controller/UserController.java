@@ -26,7 +26,7 @@ public class UserController {
             return new ResponseEntity<>(response, HttpStatus.CREATED);
         } catch (DuplicateException ex) {
             ApiResponse response = new ApiResponse(false, ex.getMessage());
-            return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>(response,  HttpStatus.BAD_REQUEST);
         }
 
 
